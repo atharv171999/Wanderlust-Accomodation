@@ -6,11 +6,11 @@ export default function ToursPage() {
   return (
     <div className="min-h-screen bg-[#f4f8fb] pt-20 pb-24 px-4 sm:px-6 lg:px-8 font-sans text-center">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-[2.75rem] font-bold text-[#3a3f47] mb-6 tracking-tight">
-          Stories around the World, One Journey at a Time
+        <h1 className="text-4xl md:text-[2.60rem] font-bold text-[#3a3f47] mb-6 tracking-tight">
+          At Wanderlust Accommodation, it is a profound return to oneself.
         </h1>
         <p className="text-[1.1rem] md:text-lg text-[#858d99] font-normal leading-relaxed max-w-[50rem] mx-auto">
-          Going beyond sightseeing, our tours are crafted to immerse you in stories, cultures, and experiences that move you. Each journey is a thoughtfully designed package that excites, engages, and celebrates the joy of true discovery.
+         The world is a vast, unread book, and every journey you take is a masterpiece in the making. It is the quiet stillness of a Himalayan sunrise in Rishikesh, the rhythmic pulse of Tokyo’s neon streets, and the emerald reflection of a Kerala backwater at dusk. We don’t just book stays; we curate the moments that become your favorite stories.
         </p>
       </div>
       
@@ -18,10 +18,10 @@ export default function ToursPage() {
       <div className="mt-16 max-w-[1400px] mx-auto text-left">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {tourPackages.map((tour) => (
-            <div key={tour.id} className="bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300 border border-gray-100/50 flex flex-col h-full group">
+            <div key={tour.id} className="bg-white  overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300 border border-gray-100/50 flex flex-col h-full group">
               
               {/* Image Container */}
-              <div className="relative h-[280px] w-full overflow-hidden">
+              <div className="relative h-[220px] w-full overflow-hidden">
                 <Image 
                   src={tour.image} 
                   alt={tour.title} 
@@ -40,9 +40,9 @@ export default function ToursPage() {
               </div>
               
               {/* Content Container */}
-              <div className="p-7 flex flex-col flex-grow">
-                <h3 className="text-[20px] font-bold text-gray-900 mb-1.5 leading-snug">{tour.title}</h3>
-                <p className="text-[15px] text-gray-500 mb-8 flex-grow tracking-wide">{tour.location}</p>
+              <div className="p-7 flex flex-col flex-grow ">
+                <h3 className="text-[20px] font-bold text-gray-900 leading-snug">{tour.title}</h3>
+                <p className="text-[15px] text-gray-500 flex-grow tracking-wide">{tour.location}</p>
                 
                 {/* Footer: Price and Button */}
                 <div className="flex justify-between items-end mt-auto pt-2">
@@ -51,9 +51,9 @@ export default function ToursPage() {
                     <span className="text-xl font-bold text-gray-900 tracking-tight">{tour.price}</span>
                   </div>
                   
-                  <Link href={`/tours/${tour.id}`} className="bg-[#0e76e8] text-white hover:bg-blue-700 transition-colors flex items-center rounded-2xl pl-5 pr-1.5 py-1.5 group/btn shadow-md shadow-blue-500/20 active:scale-95">
+                  <Link href={`/tours/${tour.id}`} className="bg-[#fd4c4c] text-white hover:bg-blue-700 transition-colors flex items-center rounded-2xl pl-5 pr-1.5 py-1.5 group/btn shadow-md shadow-blue-500/20 active:scale-95">
                     <span className="text-[13px] font-medium mr-4">Know More</span>
-                    <div className="bg-white rounded-xl p-1.5 text-[#0e76e8] group-hover/btn:translate-x-0.5 transition-transform shadow-sm">
+                    <div className="bg-white rounded-xl p-1.5 text-[#fd4c4c] group-hover/btn:translate-x-0.5 transition-transform shadow-sm">
                       <svg className="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>

@@ -1,32 +1,32 @@
-import tanzaniaImg from "../assets/images/tanzania.png";
-import greenlandImg from "../assets/images/greenland.png";
-import antarcticaImg from "../assets/images/antarctica.png";
-import canadaImg from "../assets/images/canada.png";
-import namibiaImg from "../assets/images/namibia.png";
-import southAfricaImg from "../assets/images/south_africa.png";
-import chinaImg from "../assets/images/china.png";
-import switzerlandImg from "../assets/images/switzerland.png";
-import japanImg from "../assets/images/japan.png";
-import japanPagodaImg from "../assets/images/japan2.png";
-import nzValleyImg from "../assets/images/nz_valley.png";
-import nzLakeImg from "../assets/images/nz_lake.png";
-import jordanIsraelImg from "../assets/images/jordan_israel.png";
-import icelandLaplandImg from "../assets/images/iceland_lapland.png";
-import balkanAutumnImg from "../assets/images/balkan_autumn.png";
-import animalKingdomImg from "../assets/images/animal_kingdom.png";
-import americanDreamImg from "../assets/images/american_dream.png";
-import transSiberiaImg from "../assets/images/trans_siberia.png";
-import timelessChinaImg from "../assets/images/timeless_china.png";
-import caucasusImg from "../assets/images/caucasus.png";
-import scandinaviaArcticImg from "../assets/images/scandinavia_arctic.png";
-import spitsbergenImg from "../assets/images/spitsbergen.png";
-import africanSafariImg from "../assets/images/african_safari.png";
-import latinAmericaImg from "../assets/images/latin_america.png";
-import gloriousEuropeImg from "../assets/images/glorious_europe.png";
-import bestEuropeImg from "../assets/images/best_europe.png";
-import goldenEuropeImg from "../assets/images/golden_europe.png";
-import rockiesAlaskaImg from "../assets/images/rockies_alaska.png";
-import scandinaviaIcelandImg from "../assets/images/scandinavia_iceland.png";
+import tanzaniaImg from "../assets/images/zanzibar.jpg";
+import greenlandImg from "../assets/images/green.jpg";
+import antarcticaImg from "../assets/images/antartic.jpg";
+import canadaImg from "../assets/images/yellowknife.webp";
+import namibiaImg from "../assets/images/nambi.jpg";
+import southAfricaImg from "../assets/images/rajasthan.jpg";
+import chinaImg from "../assets/images/scotland.jpg";
+import switzerlandImg from "../assets/images/switz.jpg";
+import japanImg from "../assets/images/japan pink.jpg";
+import japanPagodaImg from "../assets/images/kyoto.webp";
+import nzValleyImg from "../assets/images/newzea.jpg";
+import nzLakeImg from "../assets/images/rishikesh.jpg";
+import jordanIsraelImg from "../assets/images/venice.jpg";
+import icelandLaplandImg from "../assets/images/ice.jpg";
+import balkanAutumnImg from "../assets/images/balkan.jpg";
+import animalKingdomImg from "../assets/images/animal kingdom.webp";
+import americanDreamImg from "../assets/images/america.webp";
+import transSiberiaImg from "../assets/images/siber.jpg";
+import timelessChinaImg from "../assets/images/hongkong.jpg";
+import caucasusImg from "../assets/images/caucasu.jpg";
+import scandinaviaArcticImg from "../assets/images/denmark.jpg";
+import spitsbergenImg from "../assets/images/spitsberg.jpg";
+import africanSafariImg from "../assets/images/africa.jpg";
+import latinAmericaImg from "../assets/images/peru.webp";
+import gloriousEuropeImg from "../assets/images/europe.jpg";
+import bestEuropeImg from "../assets/images/kerela.png";
+import goldenEuropeImg from "../assets/images/tokyo.jpg";
+import rockiesAlaskaImg from "../assets/images/alask.jpg";
+import scandinaviaIcelandImg from "../assets/images/ice.jpg";
 import eastEuropeImg from "../assets/images/east_europe.png";
 
 export const tourPackages = [
@@ -82,9 +82,9 @@ export const tourPackages = [
   },
   {
     id: 6,
-    title: "South Africa with Victoria Falls",
-    location: "South Africa, Zimbabwe",
-    price: "₹4,01,185*",
+    title: "Rajathan",
+    location: "India",
+    price: "₹1,41,185*",
     days: "13",
     image: southAfricaImg,
     overview: "Combining the cosmopolitan flair of Cape Town, the spectacular wildlife of Kruger National Park, and the sheer power of Victoria Falls, this journey delivers the absolute best of Southern Africa's contrasting landscapes.",
@@ -112,7 +112,7 @@ export const tourPackages = [
   },
   {
     id: 9,
-    title: "Japan in Pink Sakura",
+    title: "Sakura in Pink ",
     location: "Japan",
     price: "₹3,31,900*",
     days: "10",
@@ -122,7 +122,7 @@ export const tourPackages = [
   },
   {
     id: 10,
-    title: "Japan in Bloom",
+    title: "Kyoto in Bloom",
     location: "Japan",
     price: "₹3,39,700*",
     days: "10",
@@ -132,8 +132,8 @@ export const tourPackages = [
   },
   {
     id: 11,
-    title: "Grand Australia and Scenic New Zealand",
-    location: "Australia, New Zealand",
+    title: "Scenic New Zealand",
+    location: "New Zealand",
     price: "₹5,75,730*",
     days: "16",
     image: nzValleyImg,
@@ -142,18 +142,18 @@ export const tourPackages = [
   },
   {
     id: 12,
-    title: "Serene New Zealand",
-    location: "New Zealand",
-    price: "₹3,59,429*",
+    title: "Serene Rishikesh",
+    location: "India",
+    price: "₹1,59,429*",
     days: "10",
     image: nzLakeImg,
-    overview: "Focusing entirely on the unparalleled beauty of New Zealand, this journey brings you face-to-face with turquoise lakes, massive glaciers, and sweeping alpine vistas that define the cinematic Middle-earth landscape.",
-    highlights: ["Take a scenic helicopter flight over massive glaciers", "Stroll through the stunningly vibrant fields of Mount Cook", "Experience the adrenaline-pumping activities of Queenstown", "Cruise across glassy, deep blue alpine lakes"]
+    overview: "Rishikesh, often called the Yoga Capital of the World, is a unique city in Uttarakhand where the spiritual energy of the Himalayas meets the emerald waters of the holy Ganges. It serves as a gateway to the deeper Himalayas and is a rare destination that appeals equally to spiritual seekers, adventure junkies, and digital nomads.",
+    highlights: ["Take a scenic helicopter flight over massive River", "Stroll through the stunningly vibrant fields of Mount Cook", "Experience the adrenaline-pumping activities in rishikesh", "Rafting across glassy, deep blue Ganga River"]
   },
   {
     id: 13,
-    title: "Holy Lands of Jordan & Israel",
-    location: "Jordan, Israel",
+    title: "Holy Water of Venice",
+    location: "Italy",
     price: "₹1,87,250*",
     days: "13",
     image: jordanIsraelImg,
@@ -282,23 +282,23 @@ export const tourPackages = [
   },
   {
     id: 26,
-    title: "Best of Europe",
-    location: "Austria, France, Germany, Italy, Switzerland, United Kingdom, Vatican City",
-    price: "₹3,61,806*",
+    title: "Best of Kerela",
+    location: "India",
+    price: "₹1,61,806*",
     days: "12",
     image: bestEuropeImg,
-    overview: "Expanding the quintessential European journey crossing the English Channel. Experience the regal history of London before diving straight into the romantic heart, architecture, and towering landscapes of continental Europe.",
-    highlights: ["Experience the changing of the guard at Buckingham Palace", "Explore the ancient, massive Colosseum in Rome", "Take a stunning cruise down the historic River Rhine", "Ascend the spectacular Mount Titlis in a revolving cable car"]
+    overview: "Kerala, the God’s Own Country in South India (rather than the bitter gourd vegetable, karela!). Kerala is the perfect counter-balance to the mountain energy of Rishikesh, trading the Himalayas for palm-lined backwaters and tropical coasts.",
+    highlights: ["Experience the changing of the weather", "Explore the ancient, massive Colosseum in Kerela", "Take a stunning cruise down the historic River", "Ascend the spectacular Mount in a revolving cable car"]
   },
   {
     id: 27,
-    title: "Golden Europe",
-    location: "Austria, Belgium, France, Germany, Italy, Liechtenstein, Luxembourg, Netherlands, Switzerland, United Kingdom, Vatican City",
+    title: "Night in Tokyo",
+    location: "Japan",
     price: "₹4,33,326*",
     days: "18",
     image: goldenEuropeImg,
-    overview: "Our most comprehensive, sweeping European grand tour. Over nearly three weeks, you will cross eleven distinct borders, soaking in highly diverse cultures, languages, and breathtakingly beautiful landscapes.",
-    highlights: ["Explore the sprawling, historic halls of the Palace of Versailles", "Wander alongside Amsterdam's iconic, picturesque canals", "Marvel at the famously leaning tower of Pisa", "Gaze upon breathtaking, golden alpine sunsets across endless snow peaks"]
+    overview: "Our most comprehensive, sweeping Japanese odyssey. Over nearly three weeks, you will journey through diverse prefectures and hidden regions, soaking in a rich tapestry of ancient traditions, ultra-modern cityscapes, and breathtakingly beautiful landscapes. This meticulously planned 18-day itinerary ensures you experience the absolute best of the archipelago, balancing thrilling exploration—from the neon heights of Tokyo to the serene temples of Kyoto—with necessary relaxation in restorative volcanic hot springs.",
+    highlights: ["Visit the iconic, highly-photographed Chureito Pagoda", "Stay in a traditional Ryokan and experience therapeutic hot springs (Onsen)", "Travel at lightning speed on the famous Shinkansen bullet trains", "Sample incredible world-renowned culinary street food"]
   },
   {
     id: 28,

@@ -46,7 +46,7 @@ export default function ContactPage() {
             Get in Touch
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white text-center leading-tight drop-shadow-2xl">
-            We'd Love to Hear From You
+            We&apos;d Love to Hear From You
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl text-center font-medium leading-relaxed drop-shadow-lg">
             Whether you have a question about our exclusive tours, pricing, or need assistance booking your next dream journey, our dedicated luxury travel team is ready to answer all your questions.
