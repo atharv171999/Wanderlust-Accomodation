@@ -20,7 +20,7 @@ export default function Footer() {
     {
       title: "Our Office",
       icon: <MapPinIcon />,
-      details: ["Bhagwant pur,Mussoorie road", "Dehradun,Uttarakhand "],
+      details: ["Bhagwantpur, Mussoorie road", "Dehradun, 248008", "Uttarakhand "],
       subText: null
     },
     {
@@ -32,7 +32,7 @@ export default function Footer() {
     {
       title: "Email Us",
       icon: <MailIcon />,
-      details: ["support@wanderlust.com"],
+      details: ["support@wanderlustaccommodations.com"],
       subText: "We aim to respond within 24 hours."
     }
   ];
