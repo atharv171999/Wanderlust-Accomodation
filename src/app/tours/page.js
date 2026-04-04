@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { tourPackages } from "../../data/tours";
 
 export default function ToursPage() {
@@ -50,14 +51,14 @@ export default function ToursPage() {
                     <span className="text-xl font-bold text-gray-900 tracking-tight">{tour.price}</span>
                   </div>
                   
-                  <button className="bg-[#0e76e8] text-white hover:bg-blue-700 transition-colors flex items-center rounded-2xl pl-5 pr-1.5 py-1.5 group/btn shadow-md shadow-blue-500/20 active:scale-95">
+                  <Link href={`/tours/${tour.id}`} className="bg-[#0e76e8] text-white hover:bg-blue-700 transition-colors flex items-center rounded-2xl pl-5 pr-1.5 py-1.5 group/btn shadow-md shadow-blue-500/20 active:scale-95">
                     <span className="text-[13px] font-medium mr-4">Know More</span>
                     <div className="bg-white rounded-xl p-1.5 text-[#0e76e8] group-hover/btn:translate-x-0.5 transition-transform shadow-sm">
                       <svg className="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
                     </div>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

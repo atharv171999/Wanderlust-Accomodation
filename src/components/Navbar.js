@@ -30,6 +30,7 @@ export default function Navbar() {
     { name: "All Tours", href: "/tours" },
     { name: "About Us", href: "/about" },
     { name: "Terms", href: "/terms" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
