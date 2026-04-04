@@ -18,16 +18,16 @@ export default function Footer() {
 
   const contactData = [
     {
-      title: "Our Headquarters",
+      title: "Our Office",
       icon: <MapPinIcon />,
-      details: ["124 Global Way, Suite 400", "San Francisco, CA 94107", "United States"],
+      details: ["Bhagwant pur,Mussoorie road", "Dehradun,Uttarakhand "],
       subText: null
     },
     {
       title: "Call Us",
       icon: <PhoneIcon />,
-      details: ["+1 (800) 123-4567"],
-      subText: "Mon-Fri from 8am to 8pm EST"
+      details: ["+91 7895952611"],
+      subText: "Mon-Fri from 10am to 6pm IST"
     },
     {
       title: "Email Us",

@@ -225,7 +225,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 group hover:bg-white hover:shadow-md transition-all">
                   <p className="text-sm font-bold text-gray-700 mb-1">Corporate Events</p>
-                  <p className="text-xs text-gray-500 font-medium">For group inquiries or corporate packages, select \"Corporate\" in the subject line.</p>
+                  <p className="text-xs text-gray-500 font-medium">For group inquiries or corporate packages, select \&quot;Corporate\&quot; in the subject line.</p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 group hover:bg-white hover:shadow-md transition-all">
                   <p className="text-sm font-bold text-gray-700 mb-1">Partnerships</p>
