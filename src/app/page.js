@@ -125,61 +125,83 @@ export default function Home() {
  
   
   return (
-    <div className="min-h-screen bg-[#f4f8fb] pt-28 pb-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-[#f4f8fb] pt-15 pb-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
-        {/* Main Hero Banner with Rounded Corners */}
+        {/* Redesigned Luxury Hero Banner with Quote Gradient */}
         <div 
-          className="w-full relative rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col items-center justify-center text-center px-4"
-          style={{
-            minHeight: "500px",
-            backgroundImage: "url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=2070&auto=format&fit=crop')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+          className="w-full relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_80px_-20px_rgba(43,123,192,0.3)] flex flex-col items-center justify-center text-center px-6 min-h-[500px] bg-gradient-to-br from-[#45c391] to-[#2b7bc0]"
         >
-          {/* Subtle dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/30 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+          {/* Subtle decorative overlays */}
+          <div className="absolute inset-0 bg-black/5 opacity-40"></div>
+          {/* Decorative background shape pattern */}
+          <svg className="absolute inset-0 w-full h-full opacity-[0.04]" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,100 100,0 100,100"/>
+          </svg>
+          <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full blur-3xl -top-20 -left-10"></div>
+          <div className="absolute w-96 h-96 bg-white opacity-5 rounded-full blur-3xl -bottom-20 -right-10"></div>
+          
+          <div className="absolute inset-0 ring-1 ring-white/20 rounded-[2.5rem] pointer-events-none"></div>
 
-          {/* Content inside banner */}
-          <div className="relative z-10 w-full max-w-4xl mx-auto pt-16 pb-8">
-            <h1 className="text-5xl md:text-6xl lg:text-[5.5rem] font-bold text-white tracking-tight mb-5 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] leading-none">
-              DISCOVERY & BEYOND
+          {/* Luxury Hero Content */}
+          <div className="relative z-10 w-full max-w-5xl mx-auto">
+            <div className="mb-8 inline-flex items-center px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md">
+              <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse mr-3"></span>
+              <span className="text-white text-xs font-bold tracking-[0.2em] uppercase">Private & Bespoke Tours</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight mb-4 leading-none">
+              WANDERLUST <br className="hidden md:block" />
+              <span className="font-serif italic italic font-medium opacity-90">&</span> BEYOND
             </h1>
-            <p className="text-xl md:text-2xl text-white/95 font-medium tracking-wide mb-12 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] max-w-2xl mx-auto">
-              Embark on unforgettable, hand-crafted journeys designed for the modern explorer.
+            
+            <p className="text-lg md:text-2xl text-white/90 font-medium tracking-wide mb-14 drop-shadow-md max-w-3xl mx-auto leading-relaxed">
+              It is a profound return to oneself.
             </p>
 
-            <a href="/tours" className="inline-flex items-center justify-center px-9 py-4 text-lg font-bold text-gray-900 bg-white rounded-full hover:bg-gray-100 transition-all shadow-xl hover:shadow-[0_8px_25px_rgba(255,255,255,0.25)] hover:-translate-y-1 active:scale-95 mb-16">
-              Explore Our Journeys
-              <svg className="w-5 h-5 ml-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </a>
-
-            {/* Stats section */}
-            <div className="flex flex-row justify-center items-center gap-12 sm:gap-24 mb-6">
-              {/* Stat 1 */}
-              <div className="flex items-center text-left">
-                <span className="text-white text-5xl md:text-6xl font-bold tracking-tight drop-shadow-md">
-                  71
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+              <Link href="/tours" className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-gray-900 bg-white rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl">
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="relative z-10 flex items-center">
+                  Explore Journeys
+                  <svg className="w-5 h-5 ml-2.5 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
                 </span>
-                <span className="ml-3 text-white/90 text-sm md:text-base font-medium leading-tight drop-shadow-md max-w-[80px]">
-                  Countries Covered
-                </span>
-              </div>
+              </Link>
               
-              {/* Stat 2 */}
-              <div className="flex items-center text-left">
-                <span className="text-white text-5xl md:text-6xl font-bold tracking-tight drop-shadow-md">
-                  240
-                </span>
-                <span className="ml-3 text-white/90 text-sm md:text-base font-medium leading-tight drop-shadow-md max-w-[90px]">
-                  Incredible Journeys
-                </span>
-              </div>
+              <Link href="/about" className="px-10 py-5 text-lg font-bold text-white border-2 border-white/30 rounded-full hover:bg-white/10 transition-all backdrop-blur-sm">
+                Our Story
+              </Link>
             </div>
           </div>
+
+          {/* Docked Glassmorphic Stats Bar */}
+          {/* <div className="absolute bottom-10 left-10 right-10 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 md:p-8 flex items-center justify-center gap-12 sm:gap-24 shadow-2xl">
+              <div className="flex items-center gap-4 text-left group">
+                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform">
+                  <span className="text-white text-3xl font-black">71</span>
+                </div>
+                <div>
+                  <p className="text-white text-sm font-black tracking-widest uppercase">Countries</p>
+                  <p className="text-white/60 text-xs font-bold leading-none">Global Coverage</p>
+                </div>
+              </div>
+              
+              <div className="hidden sm:block w-px h-10 bg-white/20"></div>
+              
+              <div className="flex items-center gap-4 text-left group">
+                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform">
+                  <span className="text-white text-3xl font-black">240</span>
+                </div>
+                <div>
+                  <p className="text-white text-sm font-black tracking-widest uppercase">Journeys</p>
+                  <p className="text-white/60 text-xs font-bold leading-none">Curated Packages</p>
+                </div>
+              </div>
+            </div>
+          </div> */}
         </div>
 
         {/* Text Below Banner */}
@@ -228,12 +250,12 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-gray-900">Featured Journeys</h2>
               <p className="text-gray-500 mt-2">Handpicked tours to make your dream vacation a reality.</p>
             </div>
-            <a href="/tours" className="hidden sm:inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
+            <Link href="/tours" className="hidden sm:inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
               View All Tours
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-4">
@@ -287,9 +309,9 @@ export default function Home() {
           
           {/* Mobile View All Button */}
           <div className="mt-8 text-center sm:hidden px-4">
-            <a href="/tours" className="inline-flex items-center justify-center w-full bg-white border border-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-xl hover:bg-gray-50 transition">
+            <Link href="/tours" className="inline-flex items-center justify-center w-full bg-white border border-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-xl hover:bg-gray-50 transition">
               View All Tours
-            </a>
+            </Link>
           </div>
         </div>
 

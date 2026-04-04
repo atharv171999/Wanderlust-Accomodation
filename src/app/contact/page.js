@@ -163,48 +163,75 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* Right Column: Contact Info Cards */}
+          {/* Right Column: The Wanderlust Concierge Advantage */}
           <div className="w-full lg:w-[400px] flex flex-col gap-6 pt-6 lg:pt-0">
             
-            <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.04)] border border-gray-100 p-8 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-[#0e76e8]">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            <div className="bg-[#0e76e8] rounded-3xl p-8 text-white shadow-xl shadow-blue-500/20 relative overflow-hidden group">
+              {/* Decorative background circle */}
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+              
+              <h3 className="text-2xl font-black mb-6 relative z-10 leading-tight">The Wanderlust<br/>Concierge</h3>
+              
+              <div className="space-y-6 relative z-10">
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Tailored Journeys</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">Our experts craft itineraries that are as unique as your own fingerprint.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">24/7 Global Support</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">Travel with confidence knowing our dedicated team is always just a call away.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Local Hidden Gems</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">Go beyond the postcards with exclusive access to local secrets and treasures.</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Our Headquarters</h3>
-              <p className="text-gray-500 leading-relaxed font-medium">
-                124 Global Way, Suite 400<br/>
-                San Francisco, CA 94107<br/>
-                United States
-              </p>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.04)] border border-gray-100 p-8 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-[#0e76e8]">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+            {/* Quick FAQ / Info card */}
+            <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.04)] border border-gray-100 p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="w-8 h-8 bg-blue-50 text-[#0e76e8] rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                Quick Info
+              </h3>
+              <div className="space-y-4">
+                <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 group hover:bg-white hover:shadow-md transition-all">
+                  <p className="text-sm font-bold text-gray-700 mb-1">Corporate Events</p>
+                  <p className="text-xs text-gray-500 font-medium">For group inquiries or corporate packages, select \"Corporate\" in the subject line.</p>
+                </div>
+                <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 group hover:bg-white hover:shadow-md transition-all">
+                  <p className="text-sm font-bold text-gray-700 mb-1">Partnerships</p>
+                  <p className="text-xs text-gray-500 font-medium">Interested in partnering with Wanderlust? Please email our marketing team directly.</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-gray-500 leading-relaxed font-medium mb-1">
-                <a href="tel:+18001234567" className="hover:text-blue-600 transition">+1 (800) 123-4567</a>
-              </p>
-              <p className="text-sm text-gray-400 font-medium">Mon-Fri from 8am to 8pm EST</p>
-            </div>
-
-            <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.04)] border border-gray-100 p-8 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-[#0e76e8]">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-500 leading-relaxed font-medium mb-1">
-                <a href="mailto:support@wanderlust.com" className="hover:text-blue-600 transition">support@wanderlust.com</a>
-              </p>
-              <p className="text-sm text-gray-400 font-medium">We aim to respond within 24 hours.</p>
             </div>
 
           </div>

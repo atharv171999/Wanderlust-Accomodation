@@ -1,107 +1,77 @@
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-import logoImg from "../assets/images/logo.png";
+
+const MapPinIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+);
+
+const PhoneIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+);
+
+const MailIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+);
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const contactData = [
+    {
+      title: "Our Headquarters",
+      icon: <MapPinIcon />,
+      details: ["124 Global Way, Suite 400", "San Francisco, CA 94107", "United States"],
+      subText: null
+    },
+    {
+      title: "Call Us",
+      icon: <PhoneIcon />,
+      details: ["+1 (800) 123-4567"],
+      subText: "Mon-Fri from 8am to 8pm EST"
+    },
+    {
+      title: "Email Us",
+      icon: <MailIcon />,
+      details: ["support@wanderlust.com"],
+      subText: "We aim to respond within 24 hours."
+    }
+  ];
+
   return (
-    <footer className="bg-white pt-16 pb-8 border-t border-gray-100 font-sans">
+    <footer className="bg-gray-50/50 pt-16 pb-8 border-t border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
-          
-          {/* Logo Column */}
-          <div className="lg:col-span-1 flex flex-col items-start">
-            <div className="mb-4">
-              <Link href="/">
-                <Image 
-                  src={logoImg} 
-                  alt="Wanderlust Accommodation" 
-                  className="w-24 h-24 object-contain rounded-full shadow-sm mb-4" 
-                />
-              </Link>
-              <p className="text-[#0e76e8] text-sm font-semibold tracking-wider uppercase">
-                Seamless<br/>
-                <span className="font-light">Adventures</span>
-              </p>
+        
+        {/* Contact Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {contactData.map((item, index) => (
+            <div 
+              key={index} 
+              className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-white hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] transition-all duration-300 group"
+            >
+              <div className="w-14 h-14 bg-blue-50 text-[#0e76e8] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
+              </div>
+              <h3 className="text-[#1a1a1a] text-xl font-bold mb-4">{item.title}</h3>
+              <div className="space-y-1">
+                {item.details.map((detail, idx) => (
+                  <p key={idx} className="text-[#6b7280] text-base leading-relaxed">{detail}</p>
+                ))}
+              </div>
+              {item.subText && (
+                <p className="text-[#9ca3af] text-sm mt-4 font-medium">{item.subText}</p>
+              )}
             </div>
-          </div>
-
-          {/* Tours Column */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#0e76e8] text-lg font-medium mb-6">Tours</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">Seasonal Tours</Link>
-              </li>
-              <li>
-                <Link href="/tours" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">All Tours</Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">Our Blogs</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support Column */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#0e76e8] text-lg font-medium mb-6">Support</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">FAQ</Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">Cancellation Policy</Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">Refund Policy</Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">Terms & Conditions</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Website Terms Column */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#0e76e8] text-lg font-medium mb-6">Website Terms</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">Privacy policy</Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-600 hover:text-[#0e76e8] text-sm transition-colors">Terms Of Use</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Get in Touch Column */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#0e76e8] text-lg font-medium mb-6">Get in Touch</h3>
-            <p className="text-gray-700 text-sm mb-4 font-medium">+91 33 7967 0907</p>
-            
-            <button className="bg-[#2a2a2a] text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-black transition-colors mb-6 shadow-sm">
-              Contact us
-            </button>
-          </div>
+          ))}
         </div>
 
-        {/* Horizontal Divider */}
-        <div className="w-full h-px bg-gray-200 mb-6"></div>
-
-        {/* Bottom Footer Area */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
-          <div className="flex items-center mb-4 md:mb-0 font-medium">
-            <span className="text-lg mr-2">&copy;</span>
-            <span>All right reserved | 2025</span>
+        <div className="pt-8 border-t border-gray-200/60 flex flex-col items-center text-gray-500 text-sm">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-medium text-center">
+            <span>&copy; {currentYear} Wanderlust. All rights reserved.</span>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <Link href="/terms" className="hover:text-[#0e76e8] transition-colors duration-200">
+              Terms & Conditions
+            </Link>
           </div>
-          
-          <Image 
-            src={logoImg} 
-            alt="Wanderlust Logo" 
-            className="w-12 h-12 object-contain rounded-full shadow-sm flex-shrink-0" 
-          />
         </div>
 
       </div>
