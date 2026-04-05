@@ -35,7 +35,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={" fixed top-5 left-0 right-0 z-50 transition-all w-[80%] m-auto rounded-[30rem] duration-400 bg-white/90 backdrop-blur-4xl shadow-2xl py-2 md:px-2 border border-gray-300"}
+      className={` fixed top-5 left-0 right-0 z-50 transition-all w-[80%] m-auto rounded-[30rem] duration-400 bg-white/90 backdrop-blur-4xl shadow-2xl md:py-2 md:px-2 border border-gray-300 ${
+        scrolled ? "" : ""
+      } `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -44,7 +46,7 @@ export default function Navbar() {
               {/* Premium Circular Logo Container */}
               <div
                 className={`relative   transition-all duration-500 group-hover:-translate-y-0.5 group-hover:scale-150 h-20 w-20  ${
-                  scrolled ? " scale-130 md:scale-140" : " scale-150"
+                  scrolled ? " scale-100 md:scale-140" : " scale-100 md:scale-150"
                 }`}
               >
                 <Image

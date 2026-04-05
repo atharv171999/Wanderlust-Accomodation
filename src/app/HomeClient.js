@@ -130,7 +130,7 @@ export default function HomeClient() {
       <div className="max-w-full flex flex-col items-center">
         
         {/* Redesigned Luxury Hero Banner with Quote Gradient */}
-        <div className="w-full relative overflow-hidden shadow-2xl flex flex-col items-center justify-center text-center px-6 min-h-[700px] bg-slate-900">
+        <div className="w-full relative overflow-hidden shadow-2xl flex flex-col items-center justify-center text-center px-6 min-h-screen md:min-h-[700px] bg-slate-900">
           {/* Background Image with Overlay */}
           <Image
             src="/heroSection.jpg"
