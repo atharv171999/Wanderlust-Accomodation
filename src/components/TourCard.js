@@ -8,7 +8,7 @@ export default function TourCard({ tour }) {
   if (!tour) return null;
 
   return (
-    <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.15)] transition-all duration-700 border border-slate-100 flex flex-col h-full group perspective-1000">
+    <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-2xl  transition-all duration-700 border border-slate-100 flex flex-col h-full group perspective-1000">
       
       {/* Image Container with Premium Overlay */}
       <div className="relative h-[250px] w-full overflow-hidden">

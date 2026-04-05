@@ -1,8 +1,6 @@
 'use client'
 import React, {useState} from "react";
-import Footer from "../components/Footer";
 import TourCard from "../components/TourCard";
-import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -19,7 +17,7 @@ const regions = [
     )
   },
   {
-    name: "Australasia",
+    name: "Kerela",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 mx-auto">
         <path d="M2 20h20M5 20c0-6 3-10 7-10M12 10c0-4 2-6 5-6M17 4c1-1 3-1 5 1v15" />
@@ -43,7 +41,7 @@ const regions = [
     )
   },
   {
-    name: "Latin America",
+    name: "Spain",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 mx-auto">
         <path d="M12 2v20M4 7h16M11 2h2v5h-2z" />
@@ -59,7 +57,7 @@ const regions = [
     )
   },
   {
-    name: "Scandinavia",
+    name: "Rishikesh",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 mx-auto">
         <path d="M2 18h20M2 22h20M12 14v4M7 16l5-8 5 8M12 4v2M6 6l1.5 1.5M18 6l-1.5 1.5" />
@@ -67,7 +65,7 @@ const regions = [
     )
   },
   {
-    name: "Western Europe",
+    name: "Europe",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 mx-auto">
         <path d="M12 2l-6 20h12L12 2zM8 14h8M10 8h4M9 22h6" />
@@ -75,7 +73,7 @@ const regions = [
     )
   },
   {
-    name: "Northern Lights",
+    name: "Japan",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 mx-auto">
         <path d="M2 10c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0M4 22l4-6 4 6 4-6 4 6" />
@@ -83,7 +81,7 @@ const regions = [
     )
   },
   {
-    name: "Wanderlust Exclusives",
+    name: "Rajasthan",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 mx-auto">
         <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" />
@@ -128,26 +126,27 @@ export default function HomeClient() {
  
   
   return (
-    <div className="min-h-screen bg-background pt-15 pb-12 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+    <div className="min-h-screen bg-background pb-12  font-sans">
+      <div className="max-w-full flex flex-col items-center">
         
         {/* Redesigned Luxury Hero Banner with Quote Gradient */}
-        <div 
-          className="w-full relative rounded-[2.5rem] overflow-hidden shadow-[0_40px_100px_-30px_rgba(37,99,235,0.25)] flex flex-col items-center justify-center text-center px-6 min-h-[550px] bg-gradient-to-br from-primary via-primary/90 to-accent"
-        >
-          {/* Subtle decorative overlays */}
-          <div className="absolute inset-0 bg-white/5 opacity-20"></div>
-          {/* Decorative background shape pattern */}
-          <svg className="absolute inset-0 w-full h-full opacity-[0.08]" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <polygon fill="white" points="0,100 100,0 100,100"/>
-          </svg>
-          <div className="absolute w-[500px] h-[500px] bg-white opacity-20 rounded-full blur-[120px] -top-40 -left-20"></div>
-          <div className="absolute w-[500px] h-[500px] bg-accent opacity-20 rounded-full blur-[120px] -bottom-40 -right-20"></div>
+        <div className="w-full relative overflow-hidden shadow-2xl flex flex-col items-center justify-center text-center px-6 min-h-[700px] bg-slate-900">
+          {/* Background Image with Overlay */}
+          <Image
+            src="/heroSection.jpg"
+            alt="Luxury Travel Hero"
+            fill
+            className="object-cover opacity-90"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60 z-0"></div>
           
-          <div className="absolute inset-0 ring-1 ring-white/30 rounded-[2.5rem] pointer-events-none"></div>
+          {/* Subtle decorative overlays */}
+          <div className="absolute inset-0 bg-white/5 opacity-10"></div>
+          
 
           {/* Luxury Hero Content */}
-          <div className="relative z-10 w-full max-w-5xl mx-auto">
+          <div className="relative z-10 w-full max-w-5xl mt-24">
             <div className="mb-8 inline-flex items-center px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md">
               <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse mr-3"></span>
               <span className="text-white text-xs font-bold tracking-[0.2em] uppercase">Private & Bespoke Tours</span>
@@ -178,33 +177,6 @@ export default function HomeClient() {
               </Link>
             </div>
           </div>
-
-          {/* Docked Glassmorphic Stats Bar */}
-          {/* <div className="absolute bottom-10 left-10 right-10 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 md:p-8 flex items-center justify-center gap-12 sm:gap-24 shadow-2xl">
-              <div className="flex items-center gap-4 text-left group">
-                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform">
-                  <span className="text-white text-3xl font-black">71</span>
-                </div>
-                <div>
-                  <p className="text-white text-sm font-black tracking-widest uppercase">Countries</p>
-                  <p className="text-white/60 text-xs font-bold leading-none">Global Coverage</p>
-                </div>
-              </div>
-              
-              <div className="hidden sm:block w-px h-10 bg-white/20"></div>
-              
-              <div className="flex items-center gap-4 text-left group">
-                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform">
-                  <span className="text-white text-3xl font-black">240</span>
-                </div>
-                <div>
-                  <p className="text-white text-sm font-black tracking-widest uppercase">Journeys</p>
-                  <p className="text-white/60 text-xs font-bold leading-none">Curated Packages</p>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         {/* Text Below Banner */}
@@ -383,53 +355,6 @@ export default function HomeClient() {
                     </>
                   )}
                 </div>
-      
-                {/* Right Column: Contact Info Cards */}
-                {/* <div className="w-full lg:w-[400px] flex flex-col gap-6 pt-6 lg:pt-0">
-                  
-                  <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.04)] border border-gray-100 p-8 hover:-translate-y-1 transition-transform duration-300">
-                    <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-[#0e76e8]">
-                      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Our Headquarters</h3>
-                    <p className="text-gray-500 leading-relaxed font-medium">
-                      124 Global Way, Suite 400<br/>
-                      San Francisco, CA 94107<br/>
-                      United States
-                    </p>
-                  </div>
-      
-                  <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.04)] border border-gray-100 p-8 hover:-translate-y-1 transition-transform duration-300">
-                    <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-[#0e76e8]">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-                    <p className="text-gray-500 leading-relaxed font-medium mb-1">
-                      <a href="tel:+18001234567" className="hover:text-blue-600 transition">+1 (800) 123-4567</a>
-                    </p>
-                    <p className="text-sm text-gray-400 font-medium">Mon-Fri from 8am to 8pm EST</p>
-                  </div>
-      
-                  <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.04)] border border-gray-100 p-8 hover:-translate-y-1 transition-transform duration-300">
-                    <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-[#0e76e8]">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-                    <p className="text-gray-500 leading-relaxed font-medium mb-1">
-                      <a href="mailto:support@wanderlust.com" className="hover:text-blue-600 transition">support@wanderlust.com</a>
-                    </p>
-                    <p className="text-sm text-gray-400 font-medium">We aim to respond within 24 hours.</p>
-                  </div>
-      
-                </div> */}
-                
               </div>
             </div>
     </div>

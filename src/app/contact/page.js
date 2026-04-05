@@ -28,7 +28,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background font-sans pb-24">
       
       {/* Hero Section */}
-      <div className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px]">
+      <div className="relative w-full h-[50vh] md:h-[60vh] min-h-[600px] lg:min-h-screen">
         <Image
           src={contactHeroImg}
           alt="Contact Wanderlust"
@@ -41,7 +41,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/20"></div>
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center px-4 pt-20">
+        <div className="absolute inset-0 flex flex-col justify-center items-center px-4 pt-10 lg:pt-20">
           <span className="bg-white/20 backdrop-blur-md text-white text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full border border-white/20 shadow-xl mb-6">
             Get in Touch
           </span>
@@ -55,7 +55,7 @@ export default function ContactPage() {
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[80px] relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[-110px] lg:mt-[80px] relative z-10">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           
           {/* Left Column: Contact Form */}

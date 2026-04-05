@@ -109,7 +109,7 @@ export default function TermsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen mt-14 bg-background py-12 px-4 sm:px-6 lg:px-8">
       {/* Header Section */}
       <div className="max-w-4xl mx-auto text-center mt-10 mb-16">
         <h1 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-4 tracking-tight">

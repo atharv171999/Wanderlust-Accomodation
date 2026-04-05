@@ -35,11 +35,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={` fixed top-5 left-0 right-0 z-50 transition-all w-[80%] m-auto rounded-[30rem] duration-500 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-4xl shadow-2xl py-1 border-b border-gray-500"
-          : "bg-white py-2 px-2 "
-      }`}
+      className={" fixed top-5 left-0 right-0 z-50 transition-all w-[80%] m-auto rounded-[30rem] duration-400 bg-white/90 backdrop-blur-4xl shadow-2xl py-2 md:px-2 border border-gray-300"}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -47,8 +43,8 @@ export default function Navbar() {
             <Link href="/" className="group relative">
               {/* Premium Circular Logo Container */}
               <div
-                className={`relative  transition-all duration-500 group-hover:-translate-y-0.5 group-hover:scale-150 h-20 w-20  ${
-                  scrolled ? "scale-150" : "scale-150"
+                className={`relative   transition-all duration-500 group-hover:-translate-y-0.5 group-hover:scale-150 h-20 w-20  ${
+                  scrolled ? " scale-130 md:scale-140" : " scale-150"
                 }`}
               >
                 <Image
@@ -123,9 +119,9 @@ export default function Navbar() {
 
       {/* Mobile Menu Open State */}
       <div
-        className={`md:hidden absolute w-full transition-all duration-300 ease-in-out origin-top ${
+        className={`md:hidden absolute right-[0.4px] w-full transition-all duration-300 ease-in-out origin-top ${
           isOpen
-            ? "opacity-100 scale-y-100 visible h-auto"
+            ? "opacity-100 scale-y-100  visible h-auto"
             : "opacity-0 scale-y-0 invisible h-0"
         }`}
       >
