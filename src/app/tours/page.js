@@ -4,12 +4,12 @@ import { tourPackages } from "../../data/tours";
 
 export default function ToursPage() {
   return (
-    <div className="min-h-screen bg-[#f4f8fb] pt-20 pb-24 px-4 sm:px-6 lg:px-8 font-sans text-center">
+    <div className="min-h-screen bg-background pt-20 pb-24 px-4 sm:px-6 lg:px-8 font-sans text-center">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-[2.60rem] font-bold text-[#3a3f47] mb-6 tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
           At Wanderlust Accommodation, it is a profound return to oneself.
         </h1>
-        <p className="text-[1.1rem] md:text-lg text-[#858d99] font-normal leading-relaxed max-w-[50rem] mx-auto">
+        <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed max-w-[50rem] mx-auto">
          The world is a vast, unread book, and every journey you take is a masterpiece in the making. It is the quiet stillness of a Himalayan sunrise in Rishikesh, the rhythmic pulse of Tokyo’s neon streets, and the emerald reflection of a Kerala backwater at dusk. We don’t just book stays; we curate the moments that become your favorite stories.
         </p>
       </div>
@@ -18,43 +18,43 @@ export default function ToursPage() {
       <div className="mt-16 max-w-[1400px] mx-auto text-left">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {tourPackages.map((tour) => (
-            <div key={tour.id} className="bg-white  overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300 border border-gray-100/50 flex flex-col h-full group">
+            <div key={tour.id} className="bg-white rounded-[32px] overflow-hidden shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_30px_70px_-20px_rgba(37,99,235,0.2)] transition-all duration-500 border border-slate-100 flex flex-col h-full group">
               
               {/* Image Container */}
-              <div className="relative h-[220px] w-full overflow-hidden">
+              <div className="relative h-[250px] w-full overflow-hidden">
                 <Image 
                   src={tour.image} 
                   alt={tour.title} 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out" 
                 />
                 {/* Dark gradient overlay for bottom shadow */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
                 
                 {/* Days Badge */}
-                <div className="absolute top-5 right-5 bg-[#111] text-white text-center rounded-xl px-2.5 py-1.5 min-w-[3.5rem] shadow-lg backdrop-blur-sm">
-                  <span className="block text-[22px] font-bold leading-none mb-0.5">{tour.days}</span>
-                  <span className="block text-[8px] font-bold tracking-[0.2em]">DAYS</span>
+                <div className="absolute top-6 right-6 bg-slate-900/90 text-white text-center rounded-2xl px-3 py-2 min-w-[4rem] shadow-2xl backdrop-blur-md border border-white/10">
+                  <span className="block text-2xl font-black leading-none mb-0.5">{tour.days}</span>
+                  <span className="block text-[9px] font-black tracking-[0.2em]">DAYS</span>
                 </div>
               </div>
               
               {/* Content Container */}
-              <div className="p-7 flex flex-col flex-grow ">
-                <h3 className="text-[20px] font-bold text-gray-900 leading-snug">{tour.title}</h3>
-                <p className="text-[15px] text-gray-500 flex-grow tracking-wide">{tour.location}</p>
+              <div className="p-8 flex flex-col flex-grow ">
+                <h3 className="text-2xl font-black text-slate-900 mb-2 leading-tight tracking-tight">{tour.title}</h3>
+                <p className="text-base text-slate-600 mb-8 flex-grow font-medium leading-relaxed">{tour.location}</p>
                 
                 {/* Footer: Price and Button */}
-                <div className="flex justify-between items-end mt-auto pt-2">
+                <div className="flex justify-between items-end mt-auto pt-4 border-t border-slate-50">
                   <div className="flex flex-col">
-                    <span className="text-[11px] text-gray-500 font-medium mb-0.5">Price Starts at</span>
-                    <span className="text-xl font-bold text-gray-900 tracking-tight">{tour.price}</span>
+                    <span className="text-xs text-slate-500 font-bold mb-0.5 uppercase tracking-wider">Start from</span>
+                    <span className="text-2xl font-black text-primary tracking-tight">{tour.price}</span>
                   </div>
                   
-                  <Link href={`/tours/${tour.id}`} className="bg-[#fd4c4c] text-white hover:bg-blue-700 transition-colors flex items-center rounded-2xl pl-5 pr-1.5 py-1.5 group/btn shadow-md shadow-blue-500/20 active:scale-95">
-                    <span className="text-[13px] font-medium mr-4">Know More</span>
-                    <div className="bg-white rounded-xl p-1.5 text-[#fd4c4c] group-hover/btn:translate-x-0.5 transition-transform shadow-sm">
-                      <svg className="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <Link href={`/tours/${tour.id}`} className="bg-secondary text-white hover:bg-primary transition-all duration-300 flex items-center rounded-2xl pl-6 pr-2 py-2 group/btn shadow-lg shadow-secondary/20 hover:shadow-primary/30 active:scale-95">
+                    <span className="text-sm font-black mr-4">Explore</span>
+                    <div className="bg-white rounded-xl p-2 text-secondary group-hover/btn:text-primary group-hover/btn:translate-x-1 transition-all shadow-sm">
+                      <svg className="w-4 h-4 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
                     </div>

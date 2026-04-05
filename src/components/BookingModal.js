@@ -67,34 +67,34 @@ export default function BookingModal({ isOpen, onClose, tour }) {
 
         {isSuccess ? (
           <div className="p-12 text-center flex flex-col items-center justify-center min-h-[400px]">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
-              <svg className="w-10 h-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+            <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mb-6 shadow-sm border border-accent/20">
+              <svg className="w-12 h-12 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-3xl font-black text-gray-900 mb-4">Request Sent Successfully!</h2>
-            <p className="text-gray-500 max-w-md mx-auto mb-8">
-              We have received your booking request for <strong>{tour?.title}</strong>. Our travel experts will review your request and contact you shortly.
+            <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">Request Sent!</h2>
+            <p className="text-slate-600 max-w-md mx-auto mb-10 text-lg font-medium leading-relaxed">
+              We have received your booking request for <strong className="text-primary">{tour?.title}</strong>. Our travel experts will review your request and contact you shortly.
             </p>
             <button 
               onClick={onClose}
-              className="bg-[#0e76e8] text-white font-bold py-3 px-8 rounded-xl hover:bg-blue-700 transition"
+              className="bg-slate-900 text-white font-black py-4 px-10 rounded-2xl hover:bg-primary transition-all shadow-xl hover:-translate-y-1 active:scale-95"
             >
               Back to Tour
             </button>
           </div>
         ) : (
-          <div className="p-8 md:p-10">
-            <div className="mb-8">
-              <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-1 block">Booking Request</span>
-              <h2 className="text-3xl font-black text-gray-900 leading-tight">
+          <div className="p-8 md:p-12">
+            <div className="mb-10">
+              <span className="text-primary font-black tracking-[0.2em] text-xs uppercase mb-2 block">Booking Request</span>
+              <h2 className="text-4xl font-black text-slate-900 leading-tight tracking-tight">
                 {tour?.title}
               </h2>
-              <div className="flex items-center text-gray-500 mt-2 text-sm font-medium">
-                <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="flex items-center text-slate-500 mt-3 text-sm font-bold">
+                <svg className="w-5 h-5 mr-2 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                {tour?.days} Days
+                {tour?.days} Days Plan
               </div>
             </div>
 
@@ -137,43 +137,43 @@ export default function BookingModal({ isOpen, onClose, tour }) {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
-                      <Field name="name" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="John Doe" />
-                      <ErrorMessage name="name" component="div" className="text-red-500 text-xs mt-1 font-medium" />
+                      <label className="block text-sm font-black text-slate-700 mb-2">Full Name *</label>
+                      <Field name="name" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" placeholder="John Doe" />
+                      <ErrorMessage name="name" component="div" className="text-red-500 text-xs mt-1.5 font-bold" />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Email Address *</label>
-                      <Field name="email" type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="john@example.com" />
-                      <ErrorMessage name="email" component="div" className="text-red-500 text-xs mt-1 font-medium" />
+                      <label className="block text-sm font-black text-slate-700 mb-2">Email Address *</label>
+                      <Field name="email" type="email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" placeholder="john@example.com" />
+                      <ErrorMessage name="email" component="div" className="text-red-500 text-xs mt-1.5 font-bold" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Phone Number *</label>
-                      <Field name="phone" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="+1 (555) 000-0000" />
-                      <ErrorMessage name="phone" component="div" className="text-red-500 text-xs mt-1 font-medium" />
+                      <label className="block text-sm font-black text-slate-700 mb-2">Phone Number *</label>
+                      <Field name="phone" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" placeholder="+1 (555) 000-0000" />
+                      <ErrorMessage name="phone" component="div" className="text-red-500 text-xs mt-1.5 font-bold" />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Expected Travel Date *</label>
-                      <Field name="travelDate" type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" />
-                      <ErrorMessage name="travelDate" component="div" className="text-red-500 text-xs mt-1 font-medium" />
+                      <label className="block text-sm font-black text-slate-700 mb-2">Expected Travel Date *</label>
+                      <Field name="travelDate" type="date" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" />
+                      <ErrorMessage name="travelDate" component="div" className="text-red-500 text-xs mt-1.5 font-bold" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Number of Travelers *</label>
-                    <Field name="travelers" type="number" min="1" max="20" className="w-full md:w-1/2 bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" />
-                    <ErrorMessage name="travelers" component="div" className="text-red-500 text-xs mt-1 font-medium" />
+                    <label className="block text-sm font-black text-slate-700 mb-2">Number of Travelers *</label>
+                    <Field name="travelers" type="number" min="1" max="20" className="w-full md:w-1/2 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" />
+                    <ErrorMessage name="travelers" component="div" className="text-red-500 text-xs mt-1.5 font-bold" />
                   </div>
 
                   {/* Dynamic Pricing Summary */}
-                  <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100 flex justify-between items-center mt-8">
+                  <div className="bg-primary/5 rounded-[2rem] p-8 border border-primary/10 flex justify-between items-center mt-10 shadow-sm">
                     <div>
-                      <span className="block text-blue-800 text-sm font-bold mb-0.5">Estimated Total</span>
-                      <span className="text-blue-600 text-xs font-medium">₹{(rawPrice).toLocaleString('en-IN')} × {values.travelers || 0} travelers</span>
+                      <span className="block text-slate-600 text-sm font-bold mb-1 uppercase tracking-wider">Estimated Total</span>
+                      <span className="text-primary text-sm font-black">₹{(rawPrice).toLocaleString('en-IN')} × {values.travelers || 0} travelers</span>
                     </div>
-                    <div className="text-2xl font-black text-blue-900">
+                    <div className="text-3xl font-black text-slate-900 tracking-tight">
                       ₹{((rawPrice) * (values.travelers || 0)).toLocaleString('en-IN')}
                     </div>
                   </div>
@@ -181,16 +181,16 @@ export default function BookingModal({ isOpen, onClose, tour }) {
                   <button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full bg-[#0e76e8] hover:bg-blue-700 disabled:opacity-70 text-white font-bold text-lg py-4 rounded-xl transition-all shadow-[0_10px_20px_rgba(14,118,232,0.3)] mt-6 flex justify-center items-center"
+                    className="w-full bg-primary hover:bg-blue-700 disabled:opacity-70 text-white font-black text-xl py-5 rounded-2xl transition-all shadow-[0_20px_40px_-5px_rgba(37,99,235,0.4)] hover:shadow-primary/50 hover:-translate-y-1 mt-8 flex justify-center items-center"
                   >
                     {isSubmitting ? (
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                      <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
                     ) : "Confirm Request"}
                   </button>
-                  <p className="text-center text-xs text-gray-400 mt-3">You won't be charged yet. Our team will contact you to finalize details.</p>
+                  <p className="text-center text-xs text-slate-400 mt-4 font-bold uppercase tracking-widest">No payment required now</p>
                 </Form>
               )}
             </Formik>

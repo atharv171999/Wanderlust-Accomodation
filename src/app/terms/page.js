@@ -97,17 +97,17 @@ export default function TermsPage() {
       title: "12. Contact Information",
       content: "For any queries or support, contact us at:",
       contactInfo: {
-        email: "support@wanderlust.com",
-        phone: "+1 (555) 123-4567",
+        email: "support@wanderlustaccommodations.com",
+        phone: "+91 7895952611",
       },
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
       {/* Header Section */}
       <div className="max-w-4xl mx-auto text-center mt-10 mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4 tracking-tight">
+        <h1 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-4 tracking-tight">
           Terms & Conditions
         </h1>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto">
@@ -137,8 +137,8 @@ export default function TermsPage() {
               {section.list && (
                 <ul className="mt-4 space-y-3 pl-6">
                   {section.list.map((item, index) => (
-                    <li key={index} className="relative text-gray-600 text-base leading-relaxed pl-2">
-                       <span className="absolute left-[-1.5rem] top-1.5 h-2 w-2 rounded-full bg-blue-400"></span>
+                    <li key={index} className="relative text-slate-700 text-base leading-relaxed pl-2 font-medium">
+                       <span className="absolute left-[-1.5rem] top-1.5 h-2 w-2 rounded-full bg-primary/40 group-hover:bg-primary transition-colors"></span>
                       {item}
                     </li>
                   ))}
@@ -146,7 +146,7 @@ export default function TermsPage() {
               )}
 
               {section.footer && (
-                <p className="text-base text-gray-600 leading-relaxed mt-4 italic bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                <p className="text-base text-slate-700 leading-relaxed mt-4 font-bold bg-slate-50 p-6 rounded-2xl border border-slate-100">
                   {section.footer}
                 </p>
               )}
@@ -177,17 +177,17 @@ export default function TermsPage() {
           ))}
 
           {/* Acknowledgement Checkbox area visually styled */}
-          <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-100 flex items-start space-x-4">
+          <div className="mt-12 bg-gradient-to-r from-primary/5 to-accent/5 p-8 rounded-3xl border border-primary/10 flex items-start space-x-5">
              <div className="flex-shrink-0 mt-1">
-                <div className="w-6 h-6 rounded-md border-2 border-blue-500 bg-blue-500 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
+                <div className="w-8 h-8 rounded-xl border-2 border-primary bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
              </div>
              <div>
-                 <h4 className="text-lg font-semibold text-gray-900">I have read and agree</h4>
-                 <p className="text-gray-600 mt-1">By continuing to use our services and platform, you acknowledge that you have read, understood, and agreed to be bound by these terms.</p>
+                 <h4 className="text-xl font-black text-slate-900 tracking-tight">Access & Acceptance</h4>
+                 <p className="text-slate-600 mt-2 font-medium leading-relaxed">By continuing to use our services and platform, you acknowledge that you have read, understood, and agreed to be bound by these terms.</p>
              </div>
           </div>
         </div>

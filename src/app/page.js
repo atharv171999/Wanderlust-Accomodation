@@ -125,23 +125,23 @@ export default function Home() {
  
   
   return (
-    <div className="min-h-screen bg-[#f4f8fb] pt-15 pb-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-background pt-15 pb-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* Redesigned Luxury Hero Banner with Quote Gradient */}
         <div 
-          className="w-full relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_80px_-20px_rgba(43,123,192,0.3)] flex flex-col items-center justify-center text-center px-6 min-h-[500px] bg-gradient-to-br from-[#45c391] to-[#2b7bc0]"
+          className="w-full relative rounded-[2.5rem] overflow-hidden shadow-[0_40px_100px_-30px_rgba(37,99,235,0.25)] flex flex-col items-center justify-center text-center px-6 min-h-[550px] bg-gradient-to-br from-primary via-primary/90 to-accent"
         >
           {/* Subtle decorative overlays */}
-          <div className="absolute inset-0 bg-black/5 opacity-40"></div>
+          <div className="absolute inset-0 bg-white/5 opacity-20"></div>
           {/* Decorative background shape pattern */}
-          <svg className="absolute inset-0 w-full h-full opacity-[0.04]" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.08]" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon fill="white" points="0,100 100,0 100,100"/>
           </svg>
-          <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full blur-3xl -top-20 -left-10"></div>
-          <div className="absolute w-96 h-96 bg-white opacity-5 rounded-full blur-3xl -bottom-20 -right-10"></div>
+          <div className="absolute w-[500px] h-[500px] bg-white opacity-20 rounded-full blur-[120px] -top-40 -left-20"></div>
+          <div className="absolute w-[500px] h-[500px] bg-accent opacity-20 rounded-full blur-[120px] -bottom-40 -right-20"></div>
           
-          <div className="absolute inset-0 ring-1 ring-white/20 rounded-[2.5rem] pointer-events-none"></div>
+          <div className="absolute inset-0 ring-1 ring-white/30 rounded-[2.5rem] pointer-events-none"></div>
 
           {/* Luxury Hero Content */}
           <div className="relative z-10 w-full max-w-5xl mx-auto">
@@ -160,17 +160,17 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-              <Link href="/tours" className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-gray-900 bg-white rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl">
+              <Link href="/tours" className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-black text-primary bg-white rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(255,255,255,0.3)] hover:shadow-white/40">
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 <span className="relative z-10 flex items-center">
                   Explore Journeys
                   <svg className="w-5 h-5 ml-2.5 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
                 </span>
               </Link>
               
-              <Link href="/about" className="px-10 py-5 text-lg font-bold text-white border-2 border-white/30 rounded-full hover:bg-white/10 transition-all backdrop-blur-sm">
+              <Link href="/about" className="px-10 py-5 text-lg font-black text-white border-2 border-white/50 rounded-full hover:bg-white/20 transition-all backdrop-blur-md">
                 Our Story
               </Link>
             </div>
@@ -205,11 +205,11 @@ export default function Home() {
         </div>
 
         {/* Text Below Banner */}
-        <div className="mt-16 text-center max-w-3xl px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 font-serif tracking-tight">
-            Every Journey Has a Story to Tell
+        <div className="mt-20 text-center max-w-3xl px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 font-serif tracking-tight">
+            Every Journey Has a Story
           </h2>
-          <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed">
             Experience the world through crafted journeys. Discover beauty, meaning, and memory in every mile.
           </p>
         </div>
@@ -230,12 +230,12 @@ export default function Home() {
             {regions.map((region, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 py-8 px-4 flex flex-col items-center justify-center text-center group cursor-pointer border border-gray-100 hover:-translate-y-1"
+                className="bg-white rounded-3xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.15)] transition-all duration-500 py-10 px-4 flex flex-col items-center justify-center text-center group cursor-pointer border border-slate-100 hover:border-primary/20 hover:-translate-y-2"
               >
-                <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="mb-5 transform group-hover:scale-110 transition-transform duration-500">
                   {region.icon}
                 </div>
-                <h3 className="text-sm font-medium text-gray-700 group-hover:text-gray-900 leading-snug">
+                <h3 className="text-sm font-black text-slate-700 group-hover:text-primary leading-snug tracking-tight">
                   {region.name}
                 </h3>
               </div>
@@ -245,58 +245,58 @@ export default function Home() {
 
         {/* Featured Tours Grid Section */}
         <div className="w-full mt-8 max-w-[1400px] pb-24">
-          <div className="flex justify-between items-end mb-8 px-4">
+          <div className="flex justify-between items-end mb-10 px-4">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900">Featured Journeys</h2>
-              <p className="text-gray-500 mt-2">Handpicked tours to make your dream vacation a reality.</p>
+              <h2 className="text-4xl font-black text-slate-900 tracking-tight">Featured Journeys</h2>
+              <p className="text-slate-500 font-bold mt-2">Handpicked tours to make your dream vacation a reality.</p>
             </div>
-            <Link href="/tours" className="hidden sm:inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
+            <Link href="/tours" className="hidden sm:inline-flex items-center text-primary font-black hover:text-blue-700 transition group/all">
               View All Tours
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+              <svg className="w-5 h-5 ml-1.5 transform group-hover/all:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7"></path>
               </svg>
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-4">
             {tourPackages.slice(0, 12).map((tour) => (
-              <div key={tour.id} className="bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300 border border-gray-100/50 flex flex-col h-full group">
+              <div key={tour.id} className="bg-white rounded-[32px] overflow-hidden shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_30px_70px_-20px_rgba(37,99,235,0.2)] transition-all duration-500 border border-slate-100 flex flex-col h-full group">
                 
                 {/* Image Container */}
-                <div className="relative h-[280px] w-full overflow-hidden">
+                <div className="relative h-[300px] w-full overflow-hidden">
                   <Image 
                     src={tour.image} 
                     alt={tour.title} 
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out" 
                   />
                   {/* Dark gradient overlay for bottom shadow */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
                   
                   {/* Days Badge */}
-                  <div className="absolute top-5 right-5 bg-[#111] text-white text-center rounded-xl px-2.5 py-1.5 min-w-[3.5rem] shadow-lg backdrop-blur-sm">
-                    <span className="block text-[22px] font-bold leading-none mb-0.5">{tour.days}</span>
-                    <span className="block text-[8px] font-bold tracking-[0.2em]">DAYS</span>
+                  <div className="absolute top-6 right-6 bg-slate-900/90 text-white text-center rounded-2xl px-3 py-2 min-w-[4rem] shadow-2xl backdrop-blur-md border border-white/10">
+                    <span className="block text-2xl font-black leading-none mb-0.5">{tour.days}</span>
+                    <span className="block text-[9px] font-black tracking-[0.2em]">DAYS</span>
                   </div>
                 </div>
                 
                 {/* Content Container */}
-                <div className="p-7 flex flex-col flex-grow">
-                  <h3 className="text-[20px] font-bold text-gray-900 mb-1.5 leading-snug">{tour.title}</h3>
-                  <p className="text-[15px] text-gray-500 mb-8 flex-grow tracking-wide">{tour.location}</p>
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-black text-slate-900 mb-2 leading-tight tracking-tight">{tour.title}</h3>
+                  <p className="text-base text-slate-600 mb-8 flex-grow font-medium leading-relaxed">{tour.location}</p>
                   
                   {/* Footer: Price and Button */}
-                  <div className="flex justify-between items-end mt-auto pt-2">
+                  <div className="flex justify-between items-end mt-auto pt-4 border-t border-slate-50">
                     <div className="flex flex-col">
-                      <span className="text-[11px] text-gray-500 font-medium mb-0.5">Price Starts at</span>
-                      <span className="text-xl font-bold text-gray-900 tracking-tight">{tour.price}</span>
+                      <span className="text-xs text-slate-500 font-bold mb-0.5 uppercase tracking-wider">Start from</span>
+                      <span className="text-2xl font-black text-primary tracking-tight">{tour.price}</span>
                     </div>
                     
-                    <Link href={`/tours/${tour.id}`} className="bg-[#fd4c4c] text-white hover:bg-blue-700 transition-colors flex items-center rounded-2xl pl-5 pr-1.5 py-1.5 group/btn shadow-md shadow-blue-500/20 active:scale-95">
-                      <span className="text-[13px] font-medium mr-4">Know More</span>
-                      <div className="bg-white rounded-xl p-1.5 text-[#fd4c4c] group-hover/btn:translate-x-0.5 transition-transform shadow-sm">
-                        <svg className="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <Link href={`/tours/${tour.id}`} className="bg-secondary text-white hover:bg-primary transition-all duration-300 flex items-center rounded-2xl pl-6 pr-2 py-2 group/btn shadow-lg shadow-secondary/20 hover:shadow-primary/30 active:scale-95">
+                      <span className="text-sm font-black mr-4">Explore</span>
+                      <div className="bg-white rounded-xl p-2 text-secondary group-hover/btn:text-primary group-hover/btn:translate-x-1 transition-all shadow-sm">
+                        <svg className="w-4 h-4 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                       </div>
@@ -320,9 +320,9 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                 
                 {/* Left Column: Contact Form */}
-                <div className="flex-1 bg-white rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100 p-8 md:p-12 overflow-hidden relative">
+                <div className="flex-1 bg-white rounded-[2.5rem] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.1)] border border-slate-100 p-8 md:p-14 overflow-hidden relative">
                   {/* Decorative top pattern */}
-                  <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 to-[#0e76e8]"></div>
+                  <div className="absolute top-0 left-0 right-0 h-2.5 bg-gradient-to-r from-primary via-primary/80 to-accent"></div>
                   
                   {isSuccess ? (
                     <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center animation-fade-in">
@@ -407,10 +407,10 @@ export default function Home() {
                             <button 
                               type="submit" 
                               disabled={isSubmitting}
-                              className="w-full sm:w-auto px-10 bg-[#0e76e8] hover:bg-blue-700 disabled:opacity-70 text-white font-bold text-lg py-4 rounded-xl transition-all shadow-[0_10px_20px_rgba(14,118,232,0.3)] mt-2 flex justify-center items-center"
+                              className="w-full sm:w-auto px-12 bg-primary hover:bg-blue-700 disabled:opacity-70 text-white font-black text-xl py-5 rounded-2xl transition-all shadow-[0_20px_40px_-5px_rgba(37,99,235,0.4)] hover:shadow-primary/50 hover:-translate-y-1 mt-4 flex justify-center items-center"
                             >
                               {isSubmitting ? (
-                                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                                <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" fill="none" viewBox="0 0 24 24">
                                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>

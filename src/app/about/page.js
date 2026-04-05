@@ -1,26 +1,26 @@
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#f4f8fb] font-sans pb-24">
+    <div className="min-h-screen bg-background font-sans pb-24">
       {/* Hero Section */}
-      <div className="bg-white pt-32 pb-24 px-4 shadow-sm relative overflow-hidden">
+      <div className="bg-slate-50 pt-32 pb-24 px-4 shadow-sm relative overflow-hidden">
         {/* Subtle decorative background blur */}
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-50 opacity-60 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-emerald-50 opacity-60 blur-3xl"></div>
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/5 opacity-60 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-accent/5 opacity-60 blur-3xl"></div>
         
-        <div className="max-w-4xl mx-auto text-center relative z-10 text-[#3a3f47]">
-          <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-bold tracking-tight mb-6 leading-tight">
-            Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2b7bc0] to-[#45c391]">Wanderlust Accommodation</span>
+        <div className="max-w-4xl mx-auto text-center relative z-10 text-slate-900">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
+            Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Wanderlust Accommodation</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-500 font-light tracking-wide mb-10">
+          <p className="text-xl md:text-2xl text-slate-500 font-bold tracking-wide mb-10">
             Your Gateway to Seamless Adventures
           </p>
           
-          <div className="w-24 h-1.5 bg-gradient-to-r from-[#2b7bc0] to-[#45c391] mx-auto rounded-full mb-10"></div>
+          <div className="w-24 h-2 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-12 shadow-sm"></div>
           
-          <p className="text-[1.1rem] md:text-xl leading-relaxed text-gray-600 font-medium max-w-[50rem] mx-auto mb-6">
+          <p className="text-lg md:text-2xl leading-relaxed text-slate-700 font-medium max-w-[50rem] mx-auto mb-6">
             At Wanderlust Accommodation, we believe that travel is more than just a change of scenery—it’s a change of heart. Founded on the principle that the journey should be as restorative as the destination, we’ve dedicated ourselves to curating travel experiences that blend the thrill of discovery with the comforts of a home away from home.
           </p>
-          <p className="text-[1.1rem] md:text-xl leading-relaxed text-gray-600 font-medium max-w-[50rem] mx-auto">
+          <p className="text-lg md:text-2xl leading-relaxed text-slate-700 font-medium max-w-[50rem] mx-auto">
             We aren't just another booking engine. We are a team of passionate explorers, local experts, and hospitality enthusiasts who believe that where you stay defines how you remember your trip.
           </p>
         </div>
@@ -55,21 +55,21 @@ export default function AboutPage() {
         </div>
 
         {/* Why Wanderlust Quote Block */}
-        <div className="bg-gradient-to-br from-[#45c391] to-[#2b7bc0] rounded-[2rem] p-10 md:p-16 lg:p-24 text-center text-white shadow-xl relative overflow-hidden group">
+        <div className="bg-gradient-to-br from-primary to-accent rounded-[3rem] p-10 md:p-16 lg:p-24 text-center text-white shadow-[0_30px_70px_-20px_rgba(37,99,235,0.3)] relative overflow-hidden group">
           {/* Dynamic background shape pattern */}
-          <svg className="absolute inset-0 w-full h-full opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.06] group-hover:opacity-[0.1] transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon fill="white" points="0,100 100,0 100,100"/>
           </svg>
-          <div className="absolute w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -top-20 -left-10"></div>
-          <div className="absolute w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -bottom-20 -right-10"></div>
+          <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full blur-[100px] -top-32 -left-20"></div>
+          <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full blur-[100px] -bottom-32 -right-20"></div>
           
           <div className="relative z-10 max-w-5xl mx-auto">
-            <h2 className="text-[2rem] md:text-[3rem] lg:text-[3.5rem] font-medium italic mb-10 leading-[1.2] drop-shadow-md font-serif text-white/95">
+            <h2 className="text-[2.5rem] md:text-[4rem] font-black italic mb-10 leading-tight drop-shadow-2xl font-serif text-white">
               "To travel is to live, but <br className="hidden md:block" />to travel well is an art."
             </h2>
-            <div className="w-16 h-1 bg-white/40 mx-auto rounded-full mb-10"></div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 tracking-wide drop-shadow-sm">Why Wanderlust?</h3>
-            <p className="text-lg md:text-[1.15rem] text-white/90 leading-relaxed font-medium max-w-4xl mx-auto">
+            <div className="w-20 h-1.5 bg-white/50 mx-auto rounded-full mb-10 shadow-sm"></div>
+            <h3 className="text-3xl md:text-4xl font-black mb-6 tracking-tight drop-shadow-md">Why Wanderlust?</h3>
+            <p className="text-xl md:text-2xl text-white/95 leading-relaxed font-bold max-w-4xl mx-auto">
               We understand that your time is your most precious commodity. That’s why we focus on authentic experiences over cookie-cutter tours. We prioritize sustainable tourism, supporting local communities and eco-friendly stays so that the world stays beautiful for generations of wanderers to come.
             </p>
           </div>

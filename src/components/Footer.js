@@ -38,7 +38,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-50/50 pt-16 pb-8 border-t border-gray-100 font-sans">
+    <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-200 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contact Cards Grid */}
@@ -46,29 +46,29 @@ export default function Footer() {
           {contactData.map((item, index) => (
             <div 
               key={index} 
-              className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-white hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] transition-all duration-300 group"
+              className="bg-white p-8 rounded-3xl shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] border border-slate-100 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.1)] transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-blue-50 text-[#0e76e8] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                 {item.icon}
               </div>
-              <h3 className="text-[#1a1a1a] text-xl font-bold mb-4">{item.title}</h3>
+              <h3 className="text-slate-900 text-xl font-bold mb-4">{item.title}</h3>
               <div className="space-y-1">
                 {item.details.map((detail, idx) => (
-                  <p key={idx} className="text-[#6b7280] text-base leading-relaxed">{detail}</p>
+                  <p key={idx} className="text-slate-600 text-base leading-relaxed font-medium">{detail}</p>
                 ))}
               </div>
               {item.subText && (
-                <p className="text-[#9ca3af] text-sm mt-4 font-medium">{item.subText}</p>
+                <p className="text-slate-500 text-sm mt-4 font-bold">{item.subText}</p>
               )}
             </div>
           ))}
         </div>
 
-        <div className="pt-8 border-t border-gray-200/60 flex flex-col items-center text-gray-500 text-sm">
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-medium text-center">
+        <div className="pt-8 border-t border-slate-200 flex flex-col items-center text-slate-500 text-sm">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-bold text-center">
             <span>&copy; {currentYear} Wanderlust. All rights reserved.</span>
-            <span className="hidden md:inline text-gray-300">|</span>
-            <Link href="/terms" className="hover:text-[#0e76e8] transition-colors duration-200">
+            <span className="hidden md:inline text-slate-200">|</span>
+            <Link href="/terms" className="hover:text-primary transition-colors duration-200 underline decoration-2 decoration-primary/20 underline-offset-4">
               Terms & Conditions
             </Link>
           </div>

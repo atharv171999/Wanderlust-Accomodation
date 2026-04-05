@@ -37,8 +37,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] py-1 border-b border-gray-100/50"
-          : "bg-white shadow-sm py-2 px-2 border-b border-gray-50/50"
+          ? "bg-white/90 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(37,99,235,0.1)] py-1 border-b border-primary/10"
+          : "bg-white shadow-sm py-2 px-2 border-b border-gray-100"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,13 +71,13 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative text-[15px] font-medium transition-colors duration-300 hover:text-blue-600 ${
-                  pathname === link.href ? "text-blue-600" : "text-gray-700"
+                className={`relative text-[15px] font-bold tracking-tight transition-colors duration-300 hover:text-primary ${
+                  pathname === link.href ? "text-primary" : "text-slate-900"
                 }`}
               >
                 {link.name}
                 {pathname === link.href && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-500 rounded-full" />
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full shadow-[0_0_8px_rgba(37,99,235,0.4)]" />
                 )}
               </Link>
             ))}
@@ -138,10 +138,10 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
+              className={`block px-4 py-3 rounded-xl text-base font-bold transition-all ${
                 pathname === link.href
-                  ? "bg-blue-50 text-blue-600"
-                  : "text-gray-700 hover:bg-gray-50 hover:text-blue-500"
+                  ? "bg-primary/10 text-primary"
+                  : "text-slate-900 hover:bg-slate-50 hover:text-primary"
               }`}
             >
               {link.name}

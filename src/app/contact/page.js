@@ -25,7 +25,7 @@ export default function ContactPage() {
   const [isSuccess, setIsSuccess] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] font-sans pb-24">
+    <div className="min-h-screen bg-background font-sans pb-24">
       
       {/* Hero Section */}
       <div className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px]">
@@ -38,7 +38,7 @@ export default function ContactPage() {
           className="object-cover"
         />
         {/* Deep luxurious gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/20"></div>
 
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-center px-4 pt-20">
@@ -59,9 +59,9 @@ export default function ContactPage() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           
           {/* Left Column: Contact Form */}
-          <div className="flex-1 bg-white rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100 p-8 md:p-12 overflow-hidden relative">
+          <div className="flex-1 bg-white rounded-[2.5rem] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.1)] border border-slate-100 p-8 md:p-14 overflow-hidden relative">
             {/* Decorative top pattern */}
-            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 to-[#0e76e8]"></div>
+            <div className="absolute top-0 left-0 right-0 h-2.5 bg-gradient-to-r from-primary via-primary/80 to-accent"></div>
             
             {isSuccess ? (
               <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center animation-fade-in">
@@ -120,36 +120,36 @@ export default function ContactPage() {
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
-                          <Field name="name" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="John Doe" />
-                          <ErrorMessage name="name" component="div" className="text-red-500 text-xs mt-1.5 font-medium pl-1" />
+                          <label className="block text-sm font-black text-slate-700 mb-2">Full Name *</label>
+                          <Field name="name" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" placeholder="John Doe" />
+                          <ErrorMessage name="name" component="div" className="text-red-500 text-xs mt-1.5 font-bold pl-1" />
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 mb-2">Email Address *</label>
-                          <Field name="email" type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="john@example.com" />
-                          <ErrorMessage name="email" component="div" className="text-red-500 text-xs mt-1.5 font-medium pl-1" />
+                          <label className="block text-sm font-black text-slate-700 mb-2">Email Address *</label>
+                          <Field name="email" type="email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" placeholder="john@example.com" />
+                          <ErrorMessage name="email" component="div" className="text-red-500 text-xs mt-1.5 font-bold pl-1" />
                         </div>
                       </div>
 
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">Subject *</label>
-                        <Field name="subject" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="How can we help you?" />
-                        <ErrorMessage name="subject" component="div" className="text-red-500 text-xs mt-1.5 font-medium pl-1" />
+                        <label className="block text-sm font-black text-slate-700 mb-2">Subject *</label>
+                        <Field name="subject" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition" placeholder="How can we help you?" />
+                        <ErrorMessage name="subject" component="div" className="text-red-500 text-xs mt-1.5 font-bold pl-1" />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">Message *</label>
-                        <Field as="textarea" rows="5" name="message" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition resize-none" placeholder="Write your message here..." />
-                        <ErrorMessage name="message" component="div" className="text-red-500 text-xs mt-1.5 font-medium pl-1" />
+                        <label className="block text-sm font-black text-slate-700 mb-2">Message *</label>
+                        <Field as="textarea" rows="5" name="message" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition resize-none" placeholder="Write your message here..." />
+                        <ErrorMessage name="message" component="div" className="text-red-500 text-xs mt-1.5 font-bold pl-1" />
                       </div>
 
                       <button 
                         type="submit" 
                         disabled={isSubmitting}
-                        className="w-full sm:w-auto px-10 bg-[#0e76e8] hover:bg-blue-700 disabled:opacity-70 text-white font-bold text-lg py-4 rounded-xl transition-all shadow-[0_10px_20px_rgba(14,118,232,0.3)] mt-2 flex justify-center items-center"
+                        className="w-full sm:w-auto px-12 bg-primary hover:bg-blue-700 disabled:opacity-70 text-white font-black text-xl py-5 rounded-2xl transition-all shadow-[0_20px_40px_-5px_rgba(37,99,235,0.4)] hover:shadow-primary/50 hover:-translate-y-1 mt-4 flex justify-center items-center"
                       >
                         {isSubmitting ? (
-                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                          <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" fill="none" viewBox="0 0 24 24">
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
@@ -166,7 +166,7 @@ export default function ContactPage() {
           {/* Right Column: The Wanderlust Concierge Advantage */}
           <div className="w-full lg:w-[400px] flex flex-col gap-6 pt-6 lg:pt-0">
             
-            <div className="bg-[#0e76e8] rounded-3xl p-8 text-white shadow-xl shadow-blue-500/20 relative overflow-hidden group">
+            <div className="bg-primary rounded-[2rem] p-8 text-white shadow-[0_20px_50px_rgba(37,99,235,0.3)] relative overflow-hidden group">
               {/* Decorative background circle */}
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
               
