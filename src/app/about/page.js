@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "About Us",
   description: "At Wanderlust Accommodation, we believe that travel is more than just a change of scenery. Learn about our vision to curate stays that define your journey.",
@@ -39,7 +41,7 @@ export default function AboutPage() {
           <div className="lg:w-1/3">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 drop-shadow-sm tracking-tight">What We Do</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8 font-medium">
-              We bridge the gap between "tourist" and "traveler." Whether you’re looking for a secluded villa in the Mediterranean, a boutique hotel in the heart of Tokyo, or a luxury glamping experience under the stars, we hand-pick every accommodation to ensure it meets our standards of soul, style, and service.
+              We bridge the gap between &quot;tourist&quot; and &quot;traveler.&quot; Whether you’re looking for a secluded villa in the Mediterranean, a boutique hotel in the heart of Tokyo, or a luxury glamping experience under the stars, we hand-pick every accommodation to ensure it meets our standards of soul, style, and service.
             </p>
           </div>
           <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -70,7 +72,7 @@ export default function AboutPage() {
           
           <div className="relative z-10 max-w-5xl mx-auto">
             <h2 className="text-[2.5rem] md:text-[4rem] font-black italic mb-10 leading-tight drop-shadow-2xl font-serif text-white">
-              "To travel is to live, but <br className="hidden md:block" />to travel well is an art."
+              &quot;To travel is to live, but <br className="hidden md:block" />to travel well is an art.&quot;
             </h2>
             <div className="w-20 h-1.5 bg-white/50 mx-auto rounded-full mb-10 shadow-sm"></div>
             <h3 className="text-3xl md:text-4xl font-black mb-6 tracking-tight drop-shadow-md">Why Wanderlust?</h3>
@@ -117,10 +119,10 @@ export default function AboutPage() {
           <p className="text-lg md:text-xl text-gray-500 mb-10 max-w-2xl mx-auto font-medium">
             Ready to fill your passport with stories instead of just stamps? Let Wanderlust Accommodation handle the details while you focus on the horizon.
           </p>
-          <a href="/tours" className="inline-flex items-center justify-center px-10 py-4.5 text-[1.1rem] font-bold text-white bg-[#0e76e8] rounded-full hover:bg-blue-700 transition-all shadow-[0_4px_14px_0_rgba(0,118,255,0.39)] hover:shadow-[0_6px_20px_rgba(0,118,255,0.23)] hover:-translate-y-0.5 active:scale-95">
+          <Link href="/tours" className="inline-flex items-center justify-center px-10 py-4.5 text-[1.1rem] font-bold text-white bg-[#0e76e8] rounded-full hover:bg-blue-700 transition-all shadow-[0_4px_14px_0_rgba(0,118,255,0.39)] hover:shadow-[0_6px_20px_rgba(0,118,255,0.23)] hover:-translate-y-0.5 active:scale-95">
             Explore Our Tours
             <svg className="w-5 h-5 ml-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-          </a>
+          </Link>
         </div>
 
       </div>

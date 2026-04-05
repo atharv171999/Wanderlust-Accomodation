@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Logo from "../assets/images/logo.png" 
+import Logo from "../assets/images/logo-removebg-preview.png";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 export default function Navbar() {
@@ -35,10 +35,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={` fixed top-5 left-0 right-0 z-50 transition-all w-[80%] m-auto rounded-[30rem] duration-500 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(37,99,235,0.1)] py-1 border-b border-primary/10"
-          : "bg-white shadow-sm py-2 px-2 border-b border-gray-100"
+          ? "bg-white/90 backdrop-blur-4xl shadow-2xl py-1 border-b border-gray-500"
+          : "bg-white py-2 px-2 "
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,21 +46,17 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center p-0">
             <Link href="/" className="group relative">
               {/* Premium Circular Logo Container */}
-              <div 
-                className={`relative  transition-all duration-500 group-hover:-translate-y-0.5 group-hover:scale-105 h-20 w-20  ${
-                  scrolled ? 'scale-90' : 'scale-100'
+              <div
+                className={`relative  transition-all duration-500 group-hover:-translate-y-0.5 group-hover:scale-150 h-20 w-20  ${
+                  scrolled ? "scale-150" : "scale-150"
                 }`}
               >
-                <div className="relative h-full w-full overflow-hidden rounded-full border border-gray-50 bg-white shadow-sm group-hover:shadow-md transition-shadow">
-                  <Image 
-                    src={Logo} 
-                    alt="Wanderlust Accommodation" 
-                    fill
-                    // sizes=""
-                    className="  object-contain transition-transform duration-700" 
-                    // priority
-                  />
-                </div>
+                <Image
+                  src={Logo}
+                  alt="Wanderlust Accommodation"
+                  fill
+                  
+                />
               </div>
             </Link>
           </div>
