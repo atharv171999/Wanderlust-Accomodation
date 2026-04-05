@@ -5,6 +5,35 @@ import { notFound } from "next/navigation";
 import { tourPackages } from "../../../data/tours";
 import BookingWidget from "../../../components/BookingWidget";
 
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const tourId = parseInt(resolvedParams.id, 10);
+  const tour = tourPackages.find((t) => t.id === tourId);
+
+  if (!tour) {
+    return {
+      title: "Tour Not Found",
+    };
+  }
+
+  return {
+    title: tour.title,
+    description: tour.overview.slice(0, 160) + "...",
+    openGraph: {
+      title: tour.title,
+      description: tour.overview.slice(0, 160) + "...",
+      images: [
+        {
+          url: tour.image.src, // Using the src of the imported Next.js image
+          width: 1200,
+          height: 630,
+          alt: tour.title,
+        },
+      ],
+    },
+  };
+}
+
 export default async function TourDetailPage({ params }) {
   const resolvedParams = await params;
   const tourId = parseInt(resolvedParams.id, 10);

@@ -26,7 +26,7 @@ export default function Footer() {
     {
       title: "Call Us",
       icon: <PhoneIcon />,
-      details: ["+91 7895952611"],
+      details: ["+91 7302016767"],
       subText: "Mon-Fri from 10am to 6pm IST"
     },
     {

@@ -1,5 +1,10 @@
 import React from "react";
 
+export const metadata = {
+  title: "Terms & Conditions",
+  description: "Review the legal terms, booking policies, and cancellation conditions for Wanderlust Accommodation services.",
+};
+
 export default function TermsPage() {
   const lastUpdated = "April 3, 2026";
 
@@ -98,7 +103,7 @@ export default function TermsPage() {
       content: "For any queries or support, contact us at:",
       contactInfo: {
         email: "support@wanderlustaccommodations.com",
-        phone: "+91 7895952611",
+        phone: "+91 7302016767",
       },
     },
   ];

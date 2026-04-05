@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "About Us",
+  description: "At Wanderlust Accommodation, we believe that travel is more than just a change of scenery. Learn about our vision to curate stays that define your journey.",
+};
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background font-sans pb-24">
@@ -21,7 +26,7 @@ export default function AboutPage() {
             At Wanderlust Accommodation, we believe that travel is more than just a change of scenery—it’s a change of heart. Founded on the principle that the journey should be as restorative as the destination, we’ve dedicated ourselves to curating travel experiences that blend the thrill of discovery with the comforts of a home away from home.
           </p>
           <p className="text-lg md:text-2xl leading-relaxed text-slate-700 font-medium max-w-[50rem] mx-auto">
-            We aren't just another booking engine. We are a team of passionate explorers, local experts, and hospitality enthusiasts who believe that where you stay defines how you remember your trip.
+            We aren&apos;t just another booking engine. We are a team of passionate explorers, local experts, and hospitality enthusiasts who believe that where you stay defines how you remember your trip.
           </p>
         </div>
       </div>
