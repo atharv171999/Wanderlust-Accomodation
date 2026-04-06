@@ -147,7 +147,7 @@ export default function HomeClient() {
             </div>
           </div>
           {/* Viator Partner Banner Section (Mobile/Tablet Version) */}
-          <div className="w-full absolute z-20 bottom-0 md:hidden mb-16 px-4 flex justify-center pointer-events-none">
+          <div className="w-full absolute z-20 top-178 md:hidden mb-16 px-4 flex justify-center pointer-events-none">
             <Link 
               href="https://www.viator.com/" 
               target="_blank" 
