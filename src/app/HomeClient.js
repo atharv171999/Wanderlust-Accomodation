@@ -147,7 +147,7 @@ export default function HomeClient() {
             </div>
           </div>
           {/* Viator Partner Banner Section (Mobile/Tablet Version) */}
-          <div className="w-full absolute z-20 -bottom-10 md:hidden mb-16 px-4 flex justify-center pointer-events-none">
+          <div className="w-full absolute z-20 bottom-0 md:hidden mb-16 px-4 flex justify-center pointer-events-none">
             <Link 
               href="https://www.viator.com/" 
               target="_blank" 
@@ -169,7 +169,7 @@ export default function HomeClient() {
             src="/heroSection.jpg"
             alt="Luxury Travel Hero"
             fill
-            className="object-cover opacity-90"
+            className="  object-cover opacity-90"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60 z-0"></div>
