@@ -10,14 +10,16 @@ export const metadata = {
 
 export default function ToursPage() {
   return (
-    <div className="min-h-screen bg-background pt-32 pb-24 px-4 sm:px-6 lg:px-8 font-sans text-center">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
-          At Wanderlust Accommodation, it is a profound return to oneself.
-        </h1>
-        <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed max-w-[50rem] mx-auto">
-         The world is a vast, unread book, and every journey you take is a masterpiece in the making. It is the quiet stillness of a Himalayan sunrise in Rishikesh, the emerald reflection of a Kerala backwater at dusk. We don’t just book stays; we curate the moments that become your favorite stories.
-        </p>
+    <div className="min-h-screen w-full bg-background pt-32 pb-24 px-4 sm:px-6 lg:px-8 font-sans text-center">
+      <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
+            At Wanderlust Accommodation, it is a profound return to oneself.
+          </h1>
+          <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed max-w-[50rem] mx-auto">
+           The world is a vast, unread book, and every journey you take is a masterpiece in the making. It is the quiet stillness of a Himalayan sunrise in Rishikesh, the emerald reflection of a Kerala backwater at dusk. We don’t just book stays; we curate the moments that become your favorite stories.
+          </p>
+        </div>
       </div>
       
       {/* Tour Cards Grid */}

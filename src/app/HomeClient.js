@@ -126,11 +126,27 @@ export default function HomeClient() {
  
   
   return (
-    <div className="min-h-screen bg-background pb-12  font-sans">
-      <div className="max-w-full flex flex-col items-center">
+    <div className="min-h-screen w-full bg-background pb-12 font-sans">
+      <div className="w-full flex flex-col items-center">
         
         {/* Redesigned Luxury Hero Banner with Quote Gradient */}
         <div className="w-full relative overflow-hidden shadow-2xl flex flex-col items-center justify-center text-center px-6 min-h-screen md:min-h-[700px] bg-slate-900">
+
+<div className=" z-10 hidden xl:block fixed right-1 top-20 h-[600px] w-[120px] transition-all duration-700 hover:scale-105">
+            <div className="sticky top-32 group">
+              <div className="absolute -inset-2 bg-gradient-to-b from-primary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Link href="https://www.viator.com/" target="_blank" className="relative block overflow-hidden rounded-xl shadow-2xl border border-slate-200">
+                <Image 
+                  src="/viator_banner.jpg" 
+                  alt="Viator Experiences Ad" 
+                  width={120} 
+                  height={600}
+                  className="w-full h-auto object-cover"
+                />
+              </Link>
+            </div>
+          </div>
+
           {/* Background Image with Overlay */}
           <Image
             src="/heroSection.jpg"
@@ -190,7 +206,9 @@ export default function HomeClient() {
         </div>
         
         {/* Region Grid Section */}
-        <div className="w-full mt-16 max-w-6xl">
+        <div className="w-full mt-16 max-w-6xl relative">
+          {/* Floating Skyscraper Ad Banner (Desktop Only) */}
+          
           {/* SVG Gradient Defintion */}
           <svg style={{ position: 'absolute', width: 0, height: 0 }} aria-hidden="true">
             <defs>
@@ -230,6 +248,24 @@ export default function HomeClient() {
               <svg className="w-5 h-5 ml-1.5 transform group-hover/all:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7"></path>
               </svg>
+            </Link>
+          </div>
+
+          {/* Viator Partner Banner Section (Mobile/Tablet Version) */}
+          <div className="w-full fixed z-20 top-152 xl:hidden mb-16 px-4 flex justify-center pointer-events-none">
+            <Link 
+              href="https://www.viator.com/" 
+              target="_blank" 
+              className="block w-full max-w-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/20 hover:scale-105 transition-transform duration-500 pointer-events-auto bg-white"
+            >
+              <Image 
+                src="/viator_mobile_banner.jpg" 
+                alt="Viator Experiences Ad" 
+                width={500} 
+                height={120}
+                className="w-full h-auto object-cover"
+                priority
+              />
             </Link>
           </div>
 

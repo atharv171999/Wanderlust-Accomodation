@@ -53,6 +53,7 @@ export default function Navbar() {
                   src={Logo}
                   alt="Wanderlust Accommodation"
                   fill
+                  sizes=""
                   
                 />
               </div>
