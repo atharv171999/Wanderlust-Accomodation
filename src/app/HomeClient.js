@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { tourPackages } from "../data/tours";
+import sqBanner from "../assets/images/sqBanner.jpeg"
+
 // Icon Data mapping to regions with simple SVG implementations
 const regions = [
   {
@@ -132,44 +134,15 @@ export default function HomeClient() {
         {/* Redesigned Luxury Hero Banner with Quote Gradient */}
         <div className="w-full relative overflow-hidden shadow-2xl flex flex-col items-center justify-center text-center px-6 min-h-screen md:min-h-[700px] bg-slate-900">
 
-<div className=" z-10 hidden md:block absolute right-1 top-20 h-[600px] w-[120px] transition-all duration-700 hover:scale-105">
-            <div className="sticky top-32 group">
-              <div className="absolute -inset-2 bg-gradient-to-b from-primary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <Link href="https://www.viator.com/" target="_blank" className="relative block overflow-hidden rounded-xl shadow-2xl border border-slate-200">
-                <Image 
-                  src="/viator_banner.jpg" 
-                  alt="Viator Experiences Ad" 
-                  width={120} 
-                  height={600}
-                  className="w-full h-auto object-cover"
-                />
-              </Link>
-            </div>
-          </div>
-          {/* Viator Partner Banner Section (Mobile/Tablet Version) */}
-          <div className="w-full absolute z-20 top-178 md:hidden mb-16 px-4 flex justify-center pointer-events-none">
-            <Link 
-              href="https://www.viator.com/" 
-              target="_blank" 
-              className="block w-full max-w-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/20 hover:scale-105 transition-transform duration-500 pointer-events-auto bg-white"
-            >
-              <Image 
-                src="/viator_mobile_banner.jpg" 
-                alt="Viator Experiences Ad" 
-                width={500} 
-                height={120}
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </Link>
-          </div>
+
+          
 
           {/* Background Image with Overlay */}
           <Image
             src="/heroSection.jpg"
             alt="Luxury Travel Hero"
             fill
-            className="  object-cover opacity-90"
+            className=" w-screen  object-cover opacity-90"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60 z-0"></div>
@@ -214,6 +187,37 @@ export default function HomeClient() {
 
         {/* Text Below Banner */}
         <div className="mt-20 text-center max-w-3xl px-4">
+          <div className=" z-10 hidden md:block absolute right-1  h-[600px] w-[120px] transition-all duration-700 hover:scale-105">
+            <div className="sticky top-32 group">
+              <div className="absolute -inset-2 bg-gradient-to-b from-primary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Link href="https://www.viator.com/" target="_blank" className="relative block overflow-hidden rounded-xl shadow-2xl border border-slate-200">
+                <Image 
+                  src="/viator_banner.jpg" 
+                  alt="Viator Experiences Ad" 
+                  width={120} 
+                  height={600}
+                  className="w-full h-auto object-cover"
+                />
+              </Link>
+            </div>
+          </div>
+          {/* Viator Partner Banner Section (Mobile/Tablet Version) */}
+          <div className="w-full z-20 md:hidden mb-16 px-4 flex justify-center pointer-events-none">
+            <Link 
+              href="https://www.viator.com/" 
+              target="_blank" 
+              className="block w-full max-w-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/20 hover:scale-105 transition-transform duration-500 pointer-events-auto bg-white"
+            >
+              <Image 
+                src={sqBanner} 
+                alt="Viator Experiences Ad" 
+                width={500} 
+                height={120}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </Link>
+          </div>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 font-serif tracking-tight">
             Every Journey Has a Story
           </h2>
@@ -223,7 +227,7 @@ export default function HomeClient() {
         </div>
         
         {/* Region Grid Section */}
-        <div className="w-full mt-16 max-w-6xl relative">
+        <div className=" w-full  mt-16 max-w-5xl relative">
           {/* Floating Skyscraper Ad Banner (Desktop Only) */}
           
           {/* SVG Gradient Defintion */}

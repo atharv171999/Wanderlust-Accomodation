@@ -32,7 +32,7 @@ export default function Footer() {
     {
       title: "Email Us",
       icon: <MailIcon />,
-      details: ["support@wanderlustaccommodations.com"],
+      details: ["support@wanderlust","accommodations.com"],
       subText: "We aim to respond within 24 hours."
     }
   ];
@@ -42,7 +42,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-8 mb-16">
           {contactData.map((item, index) => (
             <div 
               key={index} 

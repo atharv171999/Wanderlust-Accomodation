@@ -35,11 +35,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={` fixed top-5 left-0 right-0 z-50 transition-all w-[80%] m-auto rounded-[30rem] duration-400 bg-white/90 backdrop-blur-4xl shadow-2xl md:py-2 md:px-2 border border-gray-300 ${
-        scrolled ? "" : ""
-      } `}
+      className={` fixed top-5 left-0 right-0 z-50 transition-all w-[80%] m-auto rounded-[30rem] duration-400 bg-white/90 backdrop-blur-4xl shadow-2xl md:py-2 md:px-2 border border-gray-300 `}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0 flex items-center p-0">
             <Link href="/" className="group relative">
