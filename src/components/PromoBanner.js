@@ -30,13 +30,13 @@ export default function PromoBanner() {
 
   return (
     <div 
-      className={`fixed inset-0 z-[9999] flex items-center justify-center transition-all duration-500 ${
+      className={`fixed  hidden md:block inset-0 z-9999 justify-center transition-all duration-500 ${
         isVisible ? 'bg-black/60 pointer-events-auto' : 'bg-transparent pointer-events-none'
       } backdrop-blur-sm px-4`}
       onClick={closeBanner}
     >
       <div 
-        className={`relative w-[90%] max-w-[400px] bg-white overflow-visible rounded-2xl shadow-[0_30px_100px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 transform ${
+        className={`relative m-auto top-50 w-[90%] max-w-100 bg-white overflow-visible rounded-2xl shadow-[0_30px_100px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 transform ${
           isVisible ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-8 scale-95 opacity-0'
         }`}
         onClick={(e) => e.stopPropagation()}
