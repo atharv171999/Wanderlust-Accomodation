@@ -187,7 +187,7 @@ export default function HomeClient() {
 
         {/* Text Below Banner */}
         <div className="mt-20 text-center max-w-3xl px-4">
-          <div className=" z-10 hidden md:block absolute right-1  h-[600px] w-[120px] transition-all duration-700 hover:scale-105">
+          <div className=" z-10 hidden xl:block absolute right-1  h-[600px] w-[120px] transition-all duration-700 hover:scale-105">
             <div className="sticky top-32 group">
               <div className="absolute -inset-2 bg-gradient-to-b from-primary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <Link href="https://www.viator.com/" target="_blank" className="relative block overflow-hidden rounded-xl shadow-2xl border border-slate-200">
@@ -202,7 +202,7 @@ export default function HomeClient() {
             </div>
           </div>
           {/* Viator Partner Banner Section (Mobile/Tablet Version) */}
-          <div className="w-full z-20 md:hidden mb-16 px-4 flex justify-center pointer-events-none">
+          <div className="w-full z-20 xl:hidden mb-16 px-4 flex justify-center pointer-events-none">
             <Link 
               href="https://www.viator.com/" 
               target="_blank" 
